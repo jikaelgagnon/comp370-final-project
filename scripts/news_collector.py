@@ -8,12 +8,6 @@ import json
 BASE_URL = 'https://newsapi.org/v2/everything?'
 
 def keyword_list_to_query(news_keywords):
-    """
-    Verifies no non-alphabetic letters are in any of the keywords.
-    Throws error if any occur, else returns keywords formatted as 
-    a query.
-    """
-    
     return " OR ".join(news_keywords)
 
 def fetch_latest_news(api_key, news_keywords, lookback_days=10):
@@ -25,7 +19,7 @@ def fetch_latest_news(api_key, news_keywords, lookback_days=10):
              'q': keywords, 
              'from': start_date.strftime('%Y-%m-%d'), 
              'to': end_date.strftime('%Y-%m-%d'),
-             'language':'en',
+             'language':'fr',
              'sort_by': 'popularity',
              'searchIn':'title,description'}
     response = requests.get(BASE_URL, params=query)
