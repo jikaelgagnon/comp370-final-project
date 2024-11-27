@@ -1,0 +1,14 @@
+\begin{tabular}{lr}
+\toprule
+ Count & Category  \\
+\midrule
+Elections and Political Strategies & 108 \\
+Scandals and Controversies & 79 \\
+Political Attack and Accusations & 78 \\
+Media and Public Engagement & 66 \\
+Foreign Policy and National Security & 57 \\
+Domestic Policy & 51 \\
+Social Issues & 46 \\
+Economic and Financial Issues & 21 \\
+\bottomrule
+\end{tabular}

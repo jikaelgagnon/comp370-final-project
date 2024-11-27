@@ -27,9 +27,11 @@ def pre_process_descriptions(df):
 def load_df(fname):
     df = pd.read_csv(fname, sep='\t')
     df['valid'] = df['description'].map(lambda x: type(x) == str) # remove NaN
+    df['valid'] &= df['negative/neutral/positive'].map(lambda x: type(x) == str)
     df = df[df['valid']]
-    # TODO: Delete this line later...
-    df['topic'] = np.random.randint(0,9, size=len(df))
+    df['topic'] = df['negative/neutral/positive']
+    df = df[df['topic'] != 'NaN'] # remove NaN rows
+
     pre_process_descriptions(df)
     return df
 
@@ -59,7 +61,7 @@ def get_top_n_tfidf(df, n):
         row = tf_idf_scores[i,:]
         indices = np.argsort(row)[::-1][:n]
         words = feature_names
-        out_dict[categories[i].item()] = [[words[i], row[i]] for i in indices]
+        out_dict[categories[i]] = [[words[i], row[i]] for i in indices]
     
     return out_dict
 

@@ -1,0 +1,9 @@
+\begin{tabular}{lr}
+\toprule
+Sentiment & Count \\
+\midrule
+neutral & 278 \\
+negative & 153 \\
+positive & 75 \\
+\bottomrule
+\end{tabular}
