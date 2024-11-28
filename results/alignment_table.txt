@@ -1,0 +1,15 @@
+\begin{tabular}{ll}
+\toprule
+Alignment &  Proportion\\
+\midrule
+left & 0.235 \\
+right & 0.19 \\
+left-center & 0.17 \\
+right-center & 0.152 \\
+center & 0.132 \\
+extreme-right & 0.094 \\
+satire & 0.02 \\
+conspiracy & 0.005 \\
+pro-science & 0.003 \\
+\bottomrule
+\end{tabular}
