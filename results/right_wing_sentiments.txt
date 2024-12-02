@@ -1,0 +1,10 @@
+\begin{tabular}{lr}
+\toprule
+Sentiment & Proportion\\
+\midrule
+neutral & 0.552326 \\
+positive & 0.348837 \\
+negative & 0.098837 \\
+\bottomrule
+\end{tabular}
+
