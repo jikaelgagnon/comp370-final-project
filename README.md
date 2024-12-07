@@ -1,1 +1,1 @@
-# comp370-final-project
+# Final project
